@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>관리자모드</title><!-- 관리자모드 -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="/css/admin.css">
+<script type="text/javascript" src="/js/admin.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="head-global">
+			<h1><a href="/"><img src="/images/login_tit.png" alt="egovframe" /></a></h1>
+			<ul class="utility">
+				<li class="utility-no">시스템관리자님이 로그인 하셨습니다.</li>
+				<li class="utility-no"><a href="#" class="btn-wine-bold" title="정보변경">정보변경</a></li>
+				<li class="utility-no"><a href="/login.html" class="btn-wine-bold" title="로그아웃"><font color="red">로그아웃</font></a></li>
+			</ul>
+		</div>
+		<div class="head-navi">
+			<ul id="gnb">
+				<li class="gnb-on"><a href="/setting/basic/regist.html" title="환경설정 바로가기">환경설정</a></li>
+				<li><a href="#" title="회원관리 바로가기">회원관리</a></li>
+				<li><a href="#" title="게시판관리 바로가기">게시판관리</a></li>
+				<li><a href="#" title="컨텐츠관리 바로가기">컨텐츠관리</a></li>
+				<li><a href="#" title="통계관리 바로가기">통계관리</a></li>
+				<li><a href="#" title="로그관리 바로가기">로그관리</a></li>
+				<li><a href="#" title="관리자관리 바로가기">관리자관리</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="container">
+		<div id="left-navi">
+			<h2><span>환경설정</span></h2>
+			<ul id="lnb">
+				<li><a href="/setting/basic/regist.html" title="기본설정">기본설정</a></li>
+				<li class="lnb-on"><a href="/setting/menu/list.html" title="메뉴설정">메뉴설정</a></li>
+				<li><a href="/setting/popup/list.html" title="팝업설정">팝업설정</a></li>
+				<li><a href="/setting/banner/list.html" title="배너설정">배너설정</a></li>
+			</ul>
+		</div>
+		<div id="contents">
+			<div class="title-area">
+				<h3>메뉴 등록/수정</h3>
+				<div class="top_menu_nav">HOME > 환경설정 > 메뉴설정</div>
+			</div>
+			<form name="menuRegistForm" id="menuRegistForm" method="post" onsubmit="return menu.save();">
+			<input type="hidden" name="parentNo" value="">
+			<div class="con-area">
+				<div class="con-table">
+					<table summary="기본설정" class="tbl-fixed">
+						<colgroup>
+							<col width="200px" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th align="left">번호<span class="pilsu">*</span></th>
+								<td>
+									<input type="text" name="menuNo" id="menuNo" value="" maxlength="6" placeholder="" title="번호" >
+								</td>
+							</tr>
+							<tr>
+								<th align="left">메뉴명<span class="pilsu">*</span></th>
+								<td>
+									<input type="text" name="menuName" id="menuName" value="" style="width:500px" placeholder="" title="메뉴명" >
+								</td>
+							</tr>
+							<tr>
+								<th align="left">경로<span class="pilsu">*</span></th>
+								<td>
+									<input type="text" name="menuUrl" id="menuUrl" value="" style="width:500px" placeholder="" title="경로" >
+								</td>
+							</tr>
+							<tr>
+								<th align="left">순서<span class="pilsu">*</span></th>
+								<td>
+									<select name="menuOrder" title="순서" style="width:50px">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th align="left">사용<span class="pilsu">*</span></th>
+								<td>
+									<select name="menuUse" title="사용" style="width:50px">
+										<option>Y</option>
+										<option>N</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="con-btn-bottom">
+					<input type="submit" value="저장">
+					<input type="button" value="취소" class="red" onclick="menu.list();">
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
